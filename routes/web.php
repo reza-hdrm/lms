@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Reza_hdrm\User\Models\User;
+use Spatie\Permission\Models\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,6 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/test', function () {
-    //\Spatie\Permission\Models\Permission::create(['name' => 'manage categories']);
-    /*auth()->user()->givePermissionTo('manage categories');
-    return auth()->user()->permissions;*/
-});
+
+
 

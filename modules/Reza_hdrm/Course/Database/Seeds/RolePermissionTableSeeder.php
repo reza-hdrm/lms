@@ -17,6 +17,6 @@ class RolePermissionTableSeeder extends Seeder
         Permission::findOrCreate('manage role_permissions');
         Permission::findOrCreate('teach');
 
-        Role::findOrCreate('teacher')->givePermissionTo(['teach']);
+        Role::findOrCreate('teacher')->givePermissionTo('teach');
     }
 }

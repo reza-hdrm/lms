@@ -13,6 +13,6 @@ class UserRepository
     }
 
     public function getTeachers() {
-        return [];
+        return User::permission('teach')->get();
     }
 }

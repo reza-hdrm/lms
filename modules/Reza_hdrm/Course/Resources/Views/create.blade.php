@@ -19,8 +19,9 @@
                 </div>
                 <select name="teacher_id" required>
                     <option value="">انتخاب مدرس دوره</option>
-                    <option value="1">محمد نیکو</option>
-                    <option value="2">صیاد اعظمی</option>
+                    @foreach($teachers as $teacher)
+                        <option value="{{$teacher->id}}">{{$teacher->name}}</option>
+                    @endforeach
                 </select>
                 <ul class="tags">
                     <li class="tagAdd taglist">
@@ -28,21 +29,23 @@
                     </li>
                 </ul>
                 <select name="type" required>
+                    <!-- todo مقدار ولیو ها باید با دیتابیس هماهنک شود-->
                     <option value="">نوع دوره</option>
-                    <option value="1">نقدی</option>
-                    <option value="2">رایگان</option>
+                    <option value="cash">نقدی</option>
+                    <option value="free">رایگان</option>
                 </select>
                 <select name="status" required>
                     <option value="">وضعیت دوره</option>
-                    <option value="1">درحال برگزاری</option>
-                    <option value="2">تکمیل</option>
-                    <option value="3">قفل شده</option>
+                    <!-- todo مقدار ولیو ها باید با دیتابیس هماهنک شود-->
+                    <option value="not-completed">درحال برگزاری</option>
+                    <option value="completed">تکمیل</option>
+                    <option value="lock">قفل شده</option>
                 </select>
                 <select name="category_id" required>
                     <option value="">دسته بندی</option>
-                    <option value="1">برنامه نویسی</option>
-                    <option value="2">گرافیک</option>
-                    <option value="3">کسب کار</option>
+                    @foreach($categories as $category)
+                        <option value="{{$category->id}}">{{$category->title}}</option>
+                    @endforeach
                 </select>
                 <div class="file-upload">
                     <div class="i-file-upload">
@@ -60,5 +63,5 @@
 @endsection
 
 @section('js')
-    <script src="/panel/js/tagsInput.js></script>
+    <script src="/panel/js/tagsInput.js"></script>
 @endsection

@@ -4,14 +4,14 @@ namespace Reza_hdrm\Category\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Reza_hdrm\Category\Http\Requests\CategoryRequest;
-use Reza_hdrm\Category\Repositories\CategoryRepo;
+use Reza_hdrm\Category\Repositories\CategoryRepository;
 use Reza_hdrm\Category\Responses\AjaxResponses;
 
 class CategoryController extends Controller
 {
     public $repo;
 
-    public function __construct(CategoryRepo $categoryRepo) {
+    public function __construct(CategoryRepository $categoryRepo) {
         $this->repo = $categoryRepo;
     }
 

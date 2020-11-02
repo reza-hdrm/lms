@@ -4,7 +4,7 @@ namespace Reza_hdrm\Category\Repositories;
 
 use Reza_hdrm\Category\Models\Category;
 
-class CategoryRepo
+class CategoryRepository
 {
     public function all() {
         return Category::all();
