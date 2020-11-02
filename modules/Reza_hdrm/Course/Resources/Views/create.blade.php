@@ -60,5 +60,5 @@
 @endsection
 
 @section('js')
-    <script src="/panel/js/tagsInput.js?v=12"></script>
+    <script src="/panel/js/tagsInput.js></script>
 @endsection

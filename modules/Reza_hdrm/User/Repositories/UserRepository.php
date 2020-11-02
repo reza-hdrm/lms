@@ -11,4 +11,8 @@ class UserRepository
     public function findByEmail(string $email) {
         return User::query()->where('email',$email)->first();
     }
+
+    public function getTeachers() {
+        return [];
+    }
 }

@@ -20,7 +20,7 @@ class RoleRepo
     }
 
     public function update(int $id, $request) {
-        $role = $this->findOrFail($id);
+        $role = $this->findById($id);
         return $role->syncPermissions($request->permissions)->update(['name' => $request->name]);
     }
 
